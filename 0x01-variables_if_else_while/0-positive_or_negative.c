@@ -7,7 +7,7 @@
 *Description: positive or negative
 *Return: 0
 */
-main(void)
+int main(void)
 {
 	int n;
 
