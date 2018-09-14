@@ -16,10 +16,9 @@ int main(void)
 			putchar (a);
 			putchar (b);
 			{
-				if (a != '9' && b != '9');
-				{
-				putchar(',');
-				putchar(' ');
+				if ((a != '9' && b != '9'))
+				{	putchar(',');
+					putchar(' ');
 				}
 			}
 		}
