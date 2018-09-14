@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- *main - display outcome
- *Description: combination
- *Return: 0
- */
+*main - display outcome
+*Description: combination
+*Return: 0
+*/
 int main(void)
 {
 	int a;
@@ -11,14 +11,14 @@ int main(void)
 
 	for (a = '0'; a <= '9'; a++);
 	{
-		for (b = '0', b <= '9', b++);
+		for (b = '0'; b <= '9'; b++);
 		{
 			putchar(a);
 			putchar(b);
 			if ((a != '9') && (b != '9'))
 			{
-				putchar(",");
-				putchar(" ");
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
