@@ -1,0 +1,20 @@
+#include "holberton.h"
+
+/**
+ * print_alphabet_x10 - Entry point
+ */
+void print_alphabet_x10(void)
+{
+	int A;
+	int a;
+
+	for (A = 0 ; A <= 9 ; A++)
+	{
+		for (a = 'a' ; a <= 'z' ; a++)
+		{
+			_putchar (a);
+		}
+	}
+	_putchar ('\n');
+
+}
