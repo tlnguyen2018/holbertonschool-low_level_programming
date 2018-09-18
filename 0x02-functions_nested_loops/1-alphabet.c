@@ -1,10 +1,8 @@
 #include "holberton.h"
-/**
- * main - Entry point
- *
- * Return: no return 
- */
 
+/**
+ * print_alphabet - Entry point
+ */
 void print_alphabet(void)
 {
 	int i;
