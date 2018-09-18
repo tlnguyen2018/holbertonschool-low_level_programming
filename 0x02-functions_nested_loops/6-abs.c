@@ -2,7 +2,7 @@
 
 /**
  *_abs - Entry point
- *@int : number to print
+ *@i: number to print
  *Return: no return
  */
 int _abs(int i)
