@@ -14,9 +14,9 @@ void print_diagonal(int n)
 	int hor;
 	int ver;
 
-	if (n < 0)
+	if (n <= 0)
 		_putchar(end);
-	if (n >= 0)
+	if (n > 0)
 	{
 		for (ver = 0 ; ver < n ; ver++)
 		{
