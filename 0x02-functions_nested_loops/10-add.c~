@@ -1,0 +1,18 @@
+#include "holberton.h"
+
+/**
+ *add - Entry point
+ *@x: value 1
+ *@y: value 2
+ *add: add x and y
+ *Description: add
+ *Return: value
+ */
+int add(int x, int y)
+
+{
+	int x;
+	int y;
+
+	return (x + y);
+}

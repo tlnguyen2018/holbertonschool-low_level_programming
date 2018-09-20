@@ -1,0 +1,30 @@
+#include "holberton.h"
+
+/**
+ *times_table - Entry point
+ */
+void times_table(void)
+
+{
+	int start;
+	int stop;
+	int count;
+
+	start = 0;
+	stop = (start + count);
+
+	for (count = 0 ; count <= 9 ; count++)
+	{
+		_putchar (stop + '0');
+		{
+			if (stop != (start * 9))
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			else
+				_putchar('/n');
+
+		}
+	}
+}
