@@ -14,16 +14,21 @@ void print_diagonal(int n)
 	int hor;
 	int ver;
 
-	for (ver = 0 ; ver < n ; ver++)
-	{
-		for (hor = 0 ; hor < n ; hor++)
-		{
-			if (hor == ver)
-				_putchar(ch);
-			if (hor < ver)
-				_putchar(space);
-		}
+	if (n < 0)
 		_putchar(end);
+	if (n >= 0)
+	{
+		for (ver = 0 ; ver < n ; ver++)
+		{
+			for (hor = 0 ; hor < n ; hor++)
+			{
+				if (hor == ver)
+					_putchar(ch);
+				if (hor < ver)
+					_putchar(space);
+			}
+		_putchar(end);
+		}
 	}
 
 }
