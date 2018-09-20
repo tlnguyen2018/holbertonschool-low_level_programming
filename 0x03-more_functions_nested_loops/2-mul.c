@@ -1,13 +1,14 @@
-#include "holberton.h"
+B#include "holberton.h"
 
 /**
  *mul -  Entry point
  *@a : value
  *@b : value
- *Return: Always 0
+ *Description: multi
+ *Return: value
  */
 int mul(int a, int b)
 
 {
-	return (a*b);
+	return (a * b);
 }
