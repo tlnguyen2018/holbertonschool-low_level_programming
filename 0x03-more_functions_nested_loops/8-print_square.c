@@ -1,0 +1,30 @@
+#include "holberton.h"
+
+/**
+ *print_square - print square
+ *Description: print square based on size
+ *@size: number
+ */
+void print_square(int size)
+{
+	char ch = '#';
+	char end = '\n';
+
+	int hor;
+	int ver;
+
+	if (size <= 0)
+		_putchar(end);
+	if (size > 0)
+	{
+		for (ver = 1 ; ver <= size ; ver++)
+		{
+			for (hor = 1 ; hor <= size ; hor++)
+			{
+				_putchar(ch);
+			}
+		_putchar(end);
+		}
+	}
+
+}
