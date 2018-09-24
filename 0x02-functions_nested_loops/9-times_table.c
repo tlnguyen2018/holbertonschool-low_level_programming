@@ -20,9 +20,9 @@ void times_table(void)
 			}
 			else if ((ver * hor) <= 9)
 			{
-				_putchar('');
+				_putchar(' ');
 				_putchar((ver * hor) + '0');
-				if (hr < 9)
+				if (hor < 9)
 				{
 					_putchar(',');
 					_putchar(' ');
