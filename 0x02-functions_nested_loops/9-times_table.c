@@ -8,29 +8,39 @@ void times_table(void)
 {
 	int ver;
 	int hor;
-	int mul;
 
 	for (ver = 0 ; ver <= 9 ; ver++)
 	{
 		for (hor = 0 ; hor <= 9 ; hor++)
 		{
-			mul = (ver * hor);
-			if (mul >= 10)
-			{	_putchar((mul / 10) + '0');
-			}
-			else if (ver == 0)
-				;
-			else
+			if (hor == 0)
+			{	_putchar((ver * hor) + '0');
+				_putchar(',');
 				_putchar(' ');
-			_putchar((mul % 10) + '0');
-		}
-		if (ver != 9)
-		{
-			_putchar(',');
-			_putchar(' ');
+			}
+			else if ((ver * hor) <= 9)
+			{
+				_putchar('');
+				_putchar((ver * hor) + '0');
+				if (hr < 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+			}
 
-		}
+			else
+			{
+				_putchar(((ver * hor) / 10) + '0');
+				_putchar(((ver * hor) % 10) + '0');
+				if (hor < 9)
+				{
+					_putchar(',');
+					_putchar(' ');
 
+				}
+			}
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
