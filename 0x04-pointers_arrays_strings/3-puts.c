@@ -1,0 +1,15 @@
+#include "holberton.h"
+
+/**
+ *_puts - entry point
+ *@str: value of string
+ *Description: print out string
+ */
+
+void _puts(char *str)
+
+{
+	while(*str)
+		_putchar(*str++);
+	_putchar('\n');
+}
