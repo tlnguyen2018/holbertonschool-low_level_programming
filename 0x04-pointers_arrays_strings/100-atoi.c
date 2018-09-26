@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * _atoi - entry point
@@ -21,5 +20,5 @@ int _atoi(char *s)
 	}
 	for (; s[index] >= '0' && s[index] <= '9'; index++)
 		number = (number * 10) + (s[index] - '0');
-	retun(number * sign);
+	return(number * sign);
 }
