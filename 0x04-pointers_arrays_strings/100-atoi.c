@@ -21,4 +21,6 @@ int _atoi(char *s)
 	for (; s[index] >= '0' && s[index] <= '9'; index++)
 		number = (number * 10) + (s[index] - '0');
 	return(number * sign);
+	else
+		return(0);
 }
