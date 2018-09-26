@@ -19,6 +19,7 @@ void print_array(int *a, int n)
 		{
 			printf("%d", a[index]);
 			putchar(',');
+			putchar(' ');
 		}
 		else if (index == n - 1)
 		{
