@@ -10,24 +10,26 @@ char *cap_string(char *s)
 
 	while (s[index] != '\0')
 	{
+		index++;
 		if (index == 0)
 		{
 			if (s[index] >= 'a' && s[index] <= 'z')
 				s[index] = s[index] - 32;
 			continue;
 		}
-		if (s[index] == 32 || s[index] == 9 || s[index] == 10 ||
-		    s[index] == 44 || s[index] == 59 || s[index] == 46 ||
-		    s[index] == 33 || s[index] == 63 || s[index] == 34 ||
-		    s[index] == 40 || s[index] == 41 || s[index] == 123 ||
-		    s[index] == 125)
+		if (s[index - 1] == 32 || s[index - 1] == 9 ||
+		    s[index - 1] == 10 ||
+		    s[index - 1] == 44 || s[index - 1] == 59 ||
+		    s[index - 1] == 46 ||
+		    s[index - 1] == 33 || s[index - 1] == 63 ||
+		    s[index - 1] == 34 ||
+		    s[index - 1] == 40 || s[index - 1] == 41 ||
+		    s[index - 1] == 123 ||
+		    s[index - 1] == 125)
 
 		{
-			index++;
 			if (s[index] >= 'a' && s[index] <= 'z')
-			{	s[index] = s[index] - 32;
-				continue;
-			}
+				s[index] = s[index] - 32;
 		}
 	}
 	return (s);
