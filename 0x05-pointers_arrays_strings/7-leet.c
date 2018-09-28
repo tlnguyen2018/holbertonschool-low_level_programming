@@ -18,7 +18,7 @@ char *leet(char *alpha)
 		{
 			if (alpha[index1] == original[index2])
 			{
-				alpha[index1] = new[index1];
+				alpha[index1] = new[index2];
 			}
 		}
 	}
