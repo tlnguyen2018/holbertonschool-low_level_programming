@@ -6,11 +6,10 @@
  */
 char *cap_string(char *s)
 {
-	int index = 0;
+	int index;
 
-	while (s[index] != '\0')
+	for (index = 0; s[index] != '\0'; index++)
 	{
-		index++;
 		if (index == 0)
 		{
 			if (s[index] >= 'a' && s[index] <= 'z')
