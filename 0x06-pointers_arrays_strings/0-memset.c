@@ -1,15 +1,16 @@
-#include "holberton.h"
 #include <stdio.h>
+#include "holberton.h"
 
 /**
  * *_memset - entry point
- *@b: constant byte
- *@s: value of string
+ *@s: string
+ *@b: constant value
  *@n: the first n bytes of the memory
  *Description: fill the first n bytes with constant value
  *Return: value
  */
-char *_memset(char *s, char b, unsigned int n);
+
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
 
