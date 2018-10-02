@@ -21,7 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 			if (*(s + xfs) == *(accept + yfaccept))
 			{
 				pflen++;
-				;
+				break;
 			}
 		}
 		if (pflen != 0 && *(yfaccept + accept) == '\0')
