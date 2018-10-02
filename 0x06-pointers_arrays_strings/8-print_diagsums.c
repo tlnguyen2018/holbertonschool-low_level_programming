@@ -17,7 +17,7 @@ void print_diagsums(int *a, int size)
 
 	for (dward = 0; dward < size * size; dward = dward + size + 1)
 		dwd1 += a[dward];
-	for (uward = size - 1; uward < size * size -1; uward = uward + size - 1)
+	for (uward = size - 1; uward < size * size - 1; uward = uward + size - 1)
 		uwd2 += a[uward];
 	printf("%d, ", dwd1);
 	printf("%d\n", uwd2);
