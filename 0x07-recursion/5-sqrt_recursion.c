@@ -1,12 +1,6 @@
 #include "holberton.h"
 #include <stdio.h>
 
-/**
- * helper - entry point help function for sqroot function
- * @isquare:  close to square
- * @root:  integer
- * Return: sqaure and root
- */
 int helper(int isquare, int root);
 
 /**
@@ -14,15 +8,24 @@ int helper(int isquare, int root);
  * @n: integer
  * Return: square root of n or -1
  */
+
 int _sqrt_recursion(int n)
 {
 	return (helper(n, 1));
 }
 
 
+/**
+ *helper - helper function
+ *@isquare: value
+ *@root: value
+ *Description: return the square root value
+ *Return: value
+ */
+
 int helper(int isquare, int root)
 {
-	int square = root * root;
+	int square = root * root
 
 	if (square > isquare)
 	{
