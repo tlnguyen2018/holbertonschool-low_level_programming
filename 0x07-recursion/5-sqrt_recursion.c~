@@ -1,0 +1,43 @@
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ *helper - entry point
+ *@root: root value
+ *@square: square value
+ *Description: square root
+ *Return: value
+ */
+
+int helper(int root, int square)
+{
+
+	if ((square / root) == root)
+	{
+		return (root);
+	}
+	else if (square <= 0)
+	{
+		return (-1);
+	}
+	else
+	{
+		return (helper(square, root + 1);
+	}
+}
+
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ *_sqrt_recursion - entry point
+ *@n: value
+ *Description: square root
+ *Return: 0 or -1
+ */
+
+int _sqrt_recursion(int n)
+
+{
+	return(helper(x, n);
+}
