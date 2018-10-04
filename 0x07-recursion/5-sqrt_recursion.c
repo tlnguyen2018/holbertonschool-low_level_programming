@@ -25,7 +25,7 @@ int _sqrt_recursion(int n)
 
 int helper(int isquare, int root)
 {
-	int square = root * root
+	int square = root * root;
 
 	if (square > isquare)
 	{
