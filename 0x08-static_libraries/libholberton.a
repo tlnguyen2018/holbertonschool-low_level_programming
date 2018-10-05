@@ -1,0 +1,3 @@
+#!bin/bash
+ar rc libholberton.a holberton.o
+ranlib libholberton.a
