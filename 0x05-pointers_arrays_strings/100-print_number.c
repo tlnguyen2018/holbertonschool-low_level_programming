@@ -1,30 +1,35 @@
 #include "holberton.h"
 /**
+ *print_positive_only - entry point
+ *Description: print only positive integer
+ *@n : number
+ */
+void print_positive_only(unsigned int n)
+{
+
+	if ((n > 0) && (n / 10 != 0))
+	{
+		print_positive_only(n / 10);
+	}
+	_putchar ((n % 10) + '0');
+}
+
+#include "holberton.h"
+/**
  * print_number - print out integer
  * @n: number
+ * Desription: print negative number
  */
 void print_number(int n)
 {
+	unsigned int x;
 
-	unsigned int num;
-
-	if (n < 10 && n >= 0)
-	{
-		_putchar ('0' + n);
-		return;
-	}
 	if (n < 0)
 	{
-		num = -1 * n;
+		x = (n * -1);
 		_putchar('-');
+		print_positive_only(x);
 	}
 	else
-	{
-		num = n;
-	}
-	if (num >= 10)
-	{
-		print_number(n / 10);
-	}
-	_putchar((num % 10) + '0');
+		print_positive_only(n);
 }
