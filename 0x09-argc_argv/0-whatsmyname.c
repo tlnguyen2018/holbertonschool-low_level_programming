@@ -14,7 +14,7 @@ int main(int agrc, char *agrv[])
 
 	for (index = 0; index < agrc; index++)
 	{
-		printf("%s/n", agrv[index]);
+		printf("%s\n", agrv[index]);
 	}
 	return (0);
 }
