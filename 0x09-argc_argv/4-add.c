@@ -13,18 +13,23 @@
 int main(int agrc, char *agrv[])
 {
 	int sum = 0;
-	int i = 1;
-	
-	(void) agrc;
-	for (i = 1; agrv[i] != '\0'; i++)
+	int i;
+	int j;
+
+	if (agrc == 1)
+		printf("0\n");
+	for (i = 1; i < agrc; i++)
 	{
-		if (!isdigit(agrv[i]))
+		for (j = 0; agrv[i][j] != '\0'; j++)
 		{
-			printf("%s\n", "Error");
-			return (1);
+			if (agrv[i][j] < 48 || agrv[i][j] > 57)
+			{
+				printf("%s\n", "Error");
+				return (1);
+			}
 		}
-		else
-			sum = sum + atoi(agrv[i]);
+		sum += atoi(agrv[i]);
 	}
+	printf("%d\n", sum);
 	return (0);
 }
