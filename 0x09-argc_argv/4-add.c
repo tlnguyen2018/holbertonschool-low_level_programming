@@ -17,7 +17,10 @@ int main(int agrc, char *agrv[])
 	int j;
 
 	if (agrc == 1)
+	{
 		printf("0\n");
+		return (0);
+	}
 	for (i = 1; i < agrc; i++)
 	{
 		for (j = 0; agrv[i][j] != '\0'; j++)
