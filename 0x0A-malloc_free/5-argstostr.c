@@ -14,7 +14,7 @@
 char *argstostr(int ac, char **av)
 {
 	int word, letter, len;
-	char *s;
+	char *ptr;
 	int i = 0;
 
 	if (ac < 1 || av == NULL)
@@ -27,19 +27,19 @@ char *argstostr(int ac, char **av)
 		}
 		len = letter + 1;
 	}
-	s = malloc(sizeof(char) * (len + 1));
-	if (s == NULL)
+	ptr = (char*)malloc(1 * len + 1);
+	if (ptr == NULL)
 		return (NULL);
 	for (word = 0; word < ac; word++)
 	{
 		for (letter = 0; av[word][letter] != '\0'; letter++)
 		{
-			s[i] = av[word][letter];
+			ptr[i] = av[word][letter];
 			i++;
 		}
-		s[i] = '\n';
+		ptr[i] = '\n';
 		i++;
 	}
-	s[i] = '\0';
-	return (s);
+	ptr[i] = '\0';
+	return (ptr);
 }
