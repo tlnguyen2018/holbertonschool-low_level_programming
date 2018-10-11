@@ -12,7 +12,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int size1, size2;
-	int combinesize;
+	unsigned int combinesize;
 	char *ptr;
 	unsigned int i, j;
 
@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			size2 = n;
 	}
 	combinesize = size1 + size2;
-	ptr = malloc(sizeof(char) * (combinesize + 2));
+	ptr = malloc(sizeof(char) * combinesize + 1);
 	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; i < size1; i++)
