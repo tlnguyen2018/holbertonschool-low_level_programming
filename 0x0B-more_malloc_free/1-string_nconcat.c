@@ -30,10 +30,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		for (size2 = 0; s2[size2] != '\0'; size2++)
 			;
 		if (size2 > n)
-			size2 = n;
+			size2 = n + 1;
 	}
 	combinesize = size1 + size2;
-	ptr = malloc(sizeof(char) * combinesize + 1);
+	ptr = malloc(sizeof(char) * (combinesize + 1));
 	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; i < size1; i++)
