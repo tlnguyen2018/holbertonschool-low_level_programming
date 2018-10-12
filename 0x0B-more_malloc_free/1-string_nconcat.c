@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  *string_nconcat - concatenate 2 strings to new allocated memory
@@ -19,16 +20,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	else
 	{
-		for (size1 = 0; s1[size1] != '\0'; size1++)
-			;
+		size1 = strlen(s1);
 	}
 	if (s2 == NULL)
 		s2 = "";
 	else
 	{
-		for (size2 = 0; s2[size2] != '\0'; size2++)
-			;
-		if (size2 < n)
+		size2 = strlen(s2);
+		if (size2 >= n)
 			size2 = n;
 	}
 	combinesize = size1 + size2;
