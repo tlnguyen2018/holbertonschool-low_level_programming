@@ -33,7 +33,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			free(whiskey);
 			return (NULL);
 		}
-		for (k = 0; k < i; k++)
+		for (k = 0; k <= i; k++)
 			name_copy[k] = name[k];
 		whiskey->name = name_copy;
 	}
@@ -48,7 +48,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			free(whiskey);
 			return (NULL);
 		}
-		for (k = 0; k < i; k++)
+		for (k = 0; k <= i; k++)
 			owner_copy[k] = owner[k];
 		whiskey->owner = owner_copy;
 	}
