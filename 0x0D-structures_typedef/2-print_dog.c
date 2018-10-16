@@ -11,20 +11,29 @@
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
+	{
+		d = malloc(sizeof(struct dog));
 		return;
-	printf("Name: %s\n", d->name);
+	}
+	printf("Name: ");
 	{
 		if (d->name == NULL)
-			printf("Name: (nil)\n");
+			printf("(nil)\n");
+		else
+			printf("%s\n", d->name);
 	}
-	printf("Age: %f\n", d->age);
+	printf("Age: ");
 	{
 		if (d->age < 0)
-			printf("Age: (nil)\n");
+			printf("(nil)\n");
+		else
+			printf("%f\n", d->age);
 	}
-	printf("Owner: %s\n", d->owner);
+	printf("Owner: ");
 	{
 		if (d->owner == NULL)
-			printf("Owner: (nil)\n");
+			printf("(nil)\n");
+		else
+			printf("%s\n", d->owner);
 	}
 }
