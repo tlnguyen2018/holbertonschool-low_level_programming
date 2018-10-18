@@ -7,18 +7,18 @@
  *@size: size
  *@cmp: pointer function
  *Description: function that searches for an integer
- *Return: 1, -1, or 0
+ *Return: -1 or value
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
-	if (size > 0 && array != 0 && cmp != 0)
+	if (size > 0 && cmp != NULL && array != NULL)
 	{
 		for (i = 0; i < size; i++)
 		{
-			if ((*cmp)(array[i]))
+			if ((cmp)(array[i]))
 				return (i);
 		}
 	}
