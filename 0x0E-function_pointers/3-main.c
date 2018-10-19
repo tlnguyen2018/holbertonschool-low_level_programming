@@ -4,37 +4,35 @@
 
 /**
  *main - entry point
- *@agrc: argument count
- *@agrv: argument
+ *@argc: argument count
+ *@argv: argument
  *Description : main function
  *Return: value
  */
-int main(int agrc, char *agrv[])
+int main(int argc, char *argv[])
 {
 	int num1;
 	int num2;
 	int result;
 
-	if (agrc != 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (agrv[2][1] != '\0')
+	if (argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((get_op_func(agrv[2])) == NULL)
+	if ((get_op_func(argv[2])) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	num1 = atoi(agrv[1]);
-	num2 = atoi(agrv[3]);
-	if (((*agrv[2]) == '/' || (*agrv[2]) == '%') && num2 == 0)
-		exit(100);
-	result = get_op_func(agrv[2])(num1, num2);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	result = get_op_func(argv[2])(num1, num2);
 	printf("%d\n", result);
 	return (0);
 }
