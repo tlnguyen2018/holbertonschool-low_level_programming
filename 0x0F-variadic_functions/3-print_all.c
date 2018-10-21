@@ -1,0 +1,96 @@
+#include "variadic_functions.h"
+
+/**
+ * print_string - print strings
+ *
+ * @fullist: list of arguments
+ * Return: void
+ */
+void print_string(va_list fullist)
+{
+	char *word;
+
+	word = va_arg(fullist, char *);
+	if (word == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", word);
+}
+
+/**
+ * print_int - print interger
+ *
+ * @fullist: list of arguments
+ * Return: void
+ */
+void print_int(va_list fullist)
+{
+	printf("%d", va_arg(fullist, int));
+}
+
+
+/**
+ * print_char - print char
+ *
+ * @fullist: list of arguments
+ * Return: void
+ */
+void print_char(va_list fullist)
+{
+	printf("%c", va_arg(fullist, int));
+}
+
+/**
+ * print_float - print float
+ *
+ * @fullist: list of arguments
+ * Return: void
+ */
+void print_float(va_list fullist)
+{
+	printf("%f", va_arg(fullist, double));
+}
+
+/**
+ *print_all - entry point
+ *@format: any format
+ *Description : print anything
+ */
+void print_all(const char * const format, ...)
+{
+	va_list fullist;
+	str_print list[] = {
+		{'c', print_char},
+		{'f', print_float},
+		{'i', print_int},
+		{'s', print_string},
+		{'\0', NULL}
+	};
+	unsigned int a;
+	unsigned int b;
+	char *separator;
+
+	va_start(fullist, format);
+	a = 0;
+	b = 0;
+	separator = "";
+	while (format != NULL && *(format + a) != '\0')
+	{
+		while (list[b].fpt && list[b].i != *(format + a))
+		{
+			b++;
+		}
+		if (list[b].fpt != NULL)
+		{
+			printf("%s", separator);
+			list[b].fpt(fullist);
+			separator = ", ";
+		}
+		a++;
+		b = 0;
+	}
+	printf("\n");
+	va_end(fullist);
+}

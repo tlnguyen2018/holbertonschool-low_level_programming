@@ -10,4 +10,17 @@ int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
+
+/**
+ *struct str - Struct character type and function
+ *@str: character type function
+ *@i: character
+ *@fpt: The function associated
+ */
+typedef struct str
+{
+	char i;
+	void (*fpt)(va_list fullist);
+} str_print;
+
 #endif
