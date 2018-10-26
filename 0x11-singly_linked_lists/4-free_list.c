@@ -9,8 +9,14 @@
  */
 void free_list(list_t *head)
 {
-	head = malloc(sizeof(list_t));
+	list_t *tmp;
 
-	if (head == NULL)
-		free(head);
+	while (head != NULL)
+	{
+		tmp = head;
+		head = head->next;
+		free(tmp->str);
+		free(tmp);
+	}
+	head = NULL;
 }
