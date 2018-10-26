@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- *print_len - print all the elements of linked list
+ *list_len - print all the elements of linked list
  *list_t - structure of the Node
  *@h:head
  *Description: print all the elements of linked list
