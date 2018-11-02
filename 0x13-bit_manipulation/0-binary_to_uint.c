@@ -51,8 +51,8 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i;
 	unsigned int j = 0;
-	unsigned int number;
-	unsigned int num = 0;
+	unsigned long int number;
+	unsigned long int num = 0;
 	unsigned int remainder;
 
 	if (b == NULL)
