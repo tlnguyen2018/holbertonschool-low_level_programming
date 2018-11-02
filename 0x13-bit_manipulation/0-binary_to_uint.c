@@ -72,7 +72,7 @@ unsigned int binary_to_uint(const char *b)
 		remainder = number % 10;
 		number = number / 10;
 		num = num + (_pow(2, j) * remainder);
-		j++;
+		++j;
 	}
 	return (num);
 }
