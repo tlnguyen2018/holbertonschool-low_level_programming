@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- * clear_bit - set given index value to 0
+ * flip_bits - flip bit to get the same number
  * @n: number
- * @index: index
- * Return: 1 or -1
+ * @m: number
+ * Return: number different bit
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
