@@ -1,4 +1,10 @@
+#include <stdlib.h>
 #include "holberton.h"
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h>
 
 /**
  * read_textfile - entry point
@@ -11,16 +17,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int name;
 	int red;
-	int wrt;
+	int wt ;
 	char *size;
 
-	if (filename = NULL || letters == 0)
+	if (filename == NULL || letters == 0)
 		return (0);
 
 	name = open(filename, O_RDONLY);
 	if (name < 0)
 		return (0);
-
 	size = malloc(sizeof(char) * letters);
 	if (size == NULL)
 	{
@@ -35,12 +40,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(size);
 		return (0);
 	}
-	wrt = write(STDOUT_FILENO, name, red);
-	if (wrt <= 0)
+	wt = write(STDOUT_FILENO, size, red);
+	if (wt <= 0)
 	{
 		free(size);
 		return (0);
 	}
 	free(size);
-	return (wrt);
+	return (wt);
 }
