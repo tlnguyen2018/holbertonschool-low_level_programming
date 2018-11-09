@@ -1,0 +1,39 @@
+#include <stdlib.h>
+#include "holberton.h"
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h>
+/**
+ * create_file - entry point
+ * Description: create a file
+ * @filename: name of file
+ * @text_content: content of file in string type
+ * Return: 1 on success, -1 on failure
+ */
+int create_file(const char *filename, char *text_content)
+{
+	int x;
+	int red;
+	int wrt;
+
+	if (filename == NULL)
+		return (-1);
+	x = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 00600);
+	if (x == -1)
+		return (-1);
+	if (text_content != '\0')
+	{
+		for (red = 0; *(text_content + red) != '\0';)
+			red++;
+		wrt = write(x, text_content, red);
+		if (wrt != red)
+		{
+			close(x);
+			return (-1);
+		}
+	}
+	close(x);
+	return (1);
+}
