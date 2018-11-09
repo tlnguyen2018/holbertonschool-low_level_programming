@@ -22,7 +22,7 @@ int copy_file(char *file_to, char *file_from)
 	char *size;
 
 
-	sie = malloc(sizeof(char) * 1024);
+	size = malloc(sizeof(char) * 1024);
 	if (!size)
 		return (0);
 
