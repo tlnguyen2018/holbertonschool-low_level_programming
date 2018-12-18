@@ -1,0 +1,10 @@
+#include "holberton.h"
+
+/**
+ * clear_bit - set given index value to 0
+ * @n: number
+ * @index: index
+ * Return: 1 or -1
+ */
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
+{

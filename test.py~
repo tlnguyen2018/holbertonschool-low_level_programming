@@ -1,0 +1,10 @@
+import sys
+
+if __name__ == __"main"__
+sum = 0
+
+while (i < len(sys.argv)):
+{
+sum = sys.argv[i] + sum
+    i++
+}
